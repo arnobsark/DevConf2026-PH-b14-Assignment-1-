@@ -1,17 +1,16 @@
-
-*{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0%;
     padding: 0%;
 }
 
-.header{
+.header {
     position: fixed;
     width: 100%;
 
 }
 
-.btn{
+.btn {
     background-color: #1D4ED8;
     color: #ffffff;
     border-radius: 12px;
@@ -20,41 +19,46 @@
     font-weight: bold;
     font-size: 16px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     background: #ffffff;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0% ;
-    
+    padding: 1rem 0%;
+
 }
+
 .navlinks ul {
     display: flex;
     text-decoration: none;
     gap: 1.5rem;
 }
-.navlinks ul a{
+
+.navlinks ul a {
 
     text-decoration: none;
-    
+
 }
-.link{
+
+.link {
     list-style-type: none;
     color: black;
     font-size: 16px;
 }
 
-.hero{
+.hero {
     min-height: 100vh;
     background-image: url('../assets/banner.jpg');
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.htop{
+
+.htop {
     align-items: center;
     flex: 1;
     display: flex;
@@ -63,26 +67,172 @@
     margin-bottom: 4rem;
     color: #ffffff;
 }
-.htop p{
+
+.htop p {
     color: thistle;
     font-size: 20px;
     font-weight: normal;
-    width: 50%;
+    width: 70%;
     text-align: center;
 }
-.htop h1{
+
+.htop h1 {
     color: rgb(255, 255, 255);
     font-size: 5rem;
     font-weight: bold;
 }
-.hbottom{
+
+.hbottom {
     flex: 1;
     display: flex;
     align-items: end;
     margin-bottom: 3rem;
 }
-.hbottom .btn{
+
+.hbottom .btn {
     font-size: 24px;
 }
 
+.speaker h2 {
+    text-align: center;
+    font-size: 4.4rem;
+    padding: 1.1em;
+}
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+
+
+    justify-content: space-around;
+    padding: 0 7rem;
+
+    gap: 3rem;
+    /* line-height: 0%; */
+}
+
+.card {
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 20px;
+    overflow: hidden;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.card-content {
+    padding: 4% 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+}
+
+.p-head {
+    text-align: center;
+    padding: 5rem 0;
+    line-height: 1.8;
+}
+
+.p-head h2 {
+    font-size: 4.4rem;
+
+}
+.p-head p{
+    font-size: 1.5rem;
+    color: #575757;
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 2rem;
+    padding: 0 15rem;
+
+}
+
+.p-card {
+    padding: 3rem;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 20px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.ptop {
+    padding: 0 1rem;
+
+}
+
+.pbottom {
+    line-height: 3;
+    padding: 0 2rem;
+
+
+}
+
+.p-card.special {
+    background-color: #0D1B2A;
+    color: #ffffff;
+}
+
+.p-btn.special {
+    background-color: #1D4ED8;
+    color: #ffffff;
+    border: none;
+
+}
+
+.p-btn.special2 {
+    color: #000000;
+    border: 1px solid #000000;
+
+
+}
+
+.p-btn {
+    border: 1px solid #2563EB;
+    background: none;
+    color: #2563EB;
+    border-radius: 12px;
+    padding: 5% 2rem;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+hr {
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+hr.special {
+    border: none;
+    height: 1px;
+    background-color: rgb(109, 109, 109);
+}
+
+.person {
+    color: #888888;
+}
+
+.p-card strong {
+    color: #888888;
+
+}
+
+.p-card.special strong {
+    color: #93C5FD;
+
+}
+
+li::marker {
+  color: blue;
+}
