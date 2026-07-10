@@ -285,6 +285,318 @@ hr.special {
 
 
 
+/* ========== Event Schedule Section ========== */
+
+.schedule-section {
+    padding: 5rem 3.75rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.schedule-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0D1B2A;
+    line-height: 1.25;
+}
+
+.schedule-header p {
+    font-size: 1rem;
+    color: #575757;
+    margin-top: 0.75rem;
+}
+
+/* Hide radio inputs */
+.tab-input {
+    display: none;
+}
+
+/* Tab labels row */
+.tab-labels {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 2.5rem;
+}
+
+.tab-label {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.tab-label:hover {
+    background: #F8F9FB;
+}
+
+.tab-day {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0D1B2A;
+}
+
+.tab-date {
+    display: block;
+    font-size: 0.8125rem;
+    color: #888888;
+    margin-top: 0.2rem;
+}
+
+/* Active tab styles via radio */
+#day1:checked ~ .tab-labels label[for="day1"],
+#day2:checked ~ .tab-labels label[for="day2"],
+#day3:checked ~ .tab-labels label[for="day3"] {
+    border-bottom-color: #1D4ED8;
+    background: rgba(29, 78, 216, 0.05);
+}
+
+#day1:checked ~ .tab-labels label[for="day1"] .tab-day,
+#day2:checked ~ .tab-labels label[for="day2"] .tab-day,
+#day3:checked ~ .tab-labels label[for="day3"] .tab-day {
+    color: #1D4ED8;
+}
+
+/* Tab content visibility */
+.tab-content {
+    display: none;
+}
+
+#day1:checked ~ .tab-content-1,
+#day2:checked ~ .tab-content-2,
+#day3:checked ~ .tab-content-3 {
+    display: block;
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+/* Time column */
+.event-time {
+    width: 6rem;
+    flex-shrink: 0;
+    padding: 1.5rem 0;
+    text-align: right;
+}
+
+.event-time .time {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #0D1B2A;
+}
+
+.event-time .duration {
+    display: block;
+    font-size: 0.75rem;
+    color: #888888;
+    margin-top: 0.2rem;
+}
+
+/* Vertical line + dot */
+.event-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.event-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #E5E7EB;
+}
+
+.event-dot {
+    width: 12px;
+    height: 12px;
+    background: #1D4ED8;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 1.75rem;
+    box-shadow: 0 0 0 2px #1D4ED8;
+}
+
+/* Event card */
+.event-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    transition: box-shadow 0.2s;
+}
+
+.event-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.event-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0D1B2A;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.event-speaker,
+.event-location {
+    font-size: 0.8125rem;
+    color: #575757;
+    margin-top: 0.4rem;
+}
+
+.event-speaker i,
+.event-location i {
+    color: #2563EB;
+    margin-right: 0.4rem;
+    font-size: 0.75rem;
+}
+
+/* Track tags */
+.track-tag {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.tag-ai {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1D4ED8;
+}
+
+.tag-cloud {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.tag-frontend {
+    background: rgba(245, 158, 11, 0.1);
+    color: #D97706;
+}
+
+.tag-security {
+    background: rgba(239, 68, 68, 0.1);
+    color: #DC2626;
+}
+
+.tag-workshop {
+    background: rgba(124, 58, 237, 0.1);
+    color: #7C3AED;
+}
+
+.tag-networking {
+    background: rgba(13, 27, 42, 0.1);
+    color: #0D1B2A;
+}
+
+/* First event hides top line segment */
+.timeline-event:first-child .event-line::before {
+    top: 1.75rem;
+}
+
+/* Last event hides bottom line segment */
+.timeline-event:last-child .event-line::before {
+    bottom: calc(100% - 2rem);
+}
+
+/* ========== Schedule Responsiveness ========== */
+
+@media (max-width: 768px) {
+    .schedule-section {
+        padding: 3rem 1.25rem;
+    }
+
+    .schedule-header h2 {
+        font-size: 2rem;
+    }
+
+    .tab-label {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .tab-day {
+        font-size: 0.9375rem;
+    }
+
+    .tab-date {
+        font-size: 0.75rem;
+    }
+
+    .event-time {
+        width: 4.5rem;
+        padding: 1rem 0;
+    }
+
+    .event-time .time {
+        font-size: 0.8125rem;
+    }
+
+    .timeline-event {
+        gap: 0.75rem;
+    }
+
+    .event-card {
+        padding: 1rem;
+    }
+
+    .event-card h3 {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-section {
+        padding: 2rem 1rem;
+    }
+
+    .event-time {
+        display: none;
+    }
+
+    .event-line {
+        display: none;
+    }
+
+    .timeline {
+        gap: 0.75rem;
+    }
+
+    .event-card {
+        margin: 0;
+    }
+}
+
+
 footer {
     margin-top: 10rem;
     padding: 2% 13.7rem;
