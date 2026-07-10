@@ -5,7 +5,7 @@
     padding: 0%;
 }
 
-header{
+.header{
     position: fixed;
     width: 100%;
 
@@ -17,7 +17,8 @@ header{
     border-radius: 12px;
     border: none;
     padding: 9% 2rem;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 16px;
 }
 .navbar{
     display: flex;
@@ -40,4 +41,48 @@ header{
 .link{
     list-style-type: none;
     color: black;
+    font-size: 16px;
 }
+
+.hero{
+    min-height: 100vh;
+    background-image: url('../assets/banner.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.htop{
+    align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 4rem;
+    color: #ffffff;
+}
+.htop p{
+    color: thistle;
+    font-size: 20px;
+    font-weight: normal;
+    width: 50%;
+    text-align: center;
+}
+.htop h1{
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    font-weight: bold;
+}
+.hbottom{
+    flex: 1;
+    display: flex;
+    align-items: end;
+    margin-bottom: 3rem;
+}
+.hbottom .btn{
+    font-size: 24px;
+}
+
+
