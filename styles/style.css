@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/* navbar */
 .header {
     position: fixed;
     width: 100%;
@@ -53,6 +54,7 @@
     text-decoration: none;
 }
 
+/* hero */
 .hero {
     min-height: 100vh;
     background-image: linear-gradient(to right, rgb(0, 0, 0, 0.6)30%, rgba(255, 255, 255, 0)70%),
@@ -102,6 +104,7 @@
     font-size: 24px;
 }
 
+/* speakers */
 .speaker h2 {
     text-align: center;
     font-size: 4.4rem;
@@ -152,6 +155,7 @@
 
 }
 
+/* pricing */
 .p-head {
     text-align: center;
     padding: 5rem 0;
@@ -597,6 +601,7 @@ hr.special {
 }
 
 
+/* footer styles */
 footer {
     margin-top: 10rem;
     padding: 2% 13.7rem;
