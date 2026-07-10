@@ -178,7 +178,7 @@
 }
 
 .p-card {
-    padding: 3rem;
+    padding: 1.5rem;
     border: 1px solid #E5E7EB;
     border-radius: 20px;
 }
@@ -189,20 +189,28 @@
 }
 
 .ptop {
-    padding: 0 1rem;
+    padding: 1rem;
 
 }
 
 .pbottom {
-    line-height: 3;
-    padding: 0 2rem;
+    padding: 2rem;
+}
 
-
+.pbottom ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
 }
 
 .p-card.special {
     background-color: #0D1B2A;
     color: #ffffff;
+    border: 1px solid #0D1B2A;
+}
+
+.p-card.team {
+    background-color: #F8F9FB;
 }
 
 .p-btn.special {
@@ -213,10 +221,8 @@
 }
 
 .p-btn.special2 {
-    color: #000000;
-    border: 1px solid #000000;
-
-
+    color: #0D1B2A;
+    border: 1px solid #0D1B2A;
 }
 
 .p-btn {
@@ -233,8 +239,9 @@
 
 hr {
     margin-top: 20px;
-       color: #E5E7EB;
-
+    border: none;
+    height: 1px;
+    background-color: #E5E7EB;
 }
 
 hr.special {
@@ -262,7 +269,7 @@ hr.special {
     color: #2563EB;
 }
 .p-card.special li::marker {
-    color: #2563EB;
+    color: #60A5FA;
 }
 
 .p-card li {
